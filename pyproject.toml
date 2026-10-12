@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "endpoint-detection-lab"
+version = "0.1.0"
+description = "Local Sysmon detection and reproducible validation lab"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+endpoint-lab = "endpoint_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+endpoint_lab = ["web/*", "web/assets/*", "data/*.json", "data/*.xml"]

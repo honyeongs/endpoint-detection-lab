@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-10-12",
+  "component": "lucide-static",
+  "version": "1.55.0",
+  "license": "ISC",
+  "inherited_notice": "Feather MIT notice preserved in upstream license file",
+  "source": "https://www.npmjs.com/package/lucide-static/v/1.55.0",
+  "license_source": "https://lucide.dev/license",
+  "files": [
+    {
+      "path": "src/endpoint_lab/web/assets/download.svg",
+      "sha256": "d05abc810c6fb3322401fd98def6a88426a6667f7bde54ac0682a2d52633b488"
+    },
+    {
+      "path": "src/endpoint_lab/web/assets/file-code.svg",
+      "sha256": "f9aa693c5c43cf36fc25d4495592b555dc7100beb1413869782a7f97e2db8815"
+    },
+    {
+      "path": "src/endpoint_lab/web/assets/flask-conical.svg",
+      "sha256": "8b1313563bba3263cee3b4b29658761dcb4b9ae45ed71313c9dfae8019969758"
+    },
+    {
+      "path": "src/endpoint_lab/web/assets/git-branch.svg",
+      "sha256": "e11c45181bed195ecf7762275901445d58d82e3aedeaae9d6c864a965838961f"
+    },
+    {
+      "path": "src/endpoint_lab/web/assets/list.svg",
+      "sha256": "1f3c1d9a31bcb2ec8a9d2551e8ceef83eb91e25d70055bfede4da625d88bf0e1"
+    },
+    {
+      "path": "src/endpoint_lab/web/assets/LUCIDE-LICENSE.txt",
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+    },
+    {
+      "path": "src/endpoint_lab/web/assets/pause.svg",
+      "sha256": "1394ab3e4818a4dc358dbe231ed128d54f3b0aa26ca50ad0abf695d86dae0774"
+    },
+    {
+      "path": "src/endpoint_lab/web/assets/play.svg",
+      "sha256": "b79ae771b9c4b3f22c86b4f211a6d76ae7600cf620834ba641ea1c460e870420"
+    },
+    {
+      "path": "src/endpoint_lab/web/assets/rotate-ccw.svg",
+      "sha256": "d35a4d7a6c258505a23267351045b095920bd9977a3c8ce1af967b20894cb146"
+    },
+    {
+      "path": "src/endpoint_lab/web/assets/search.svg",
+      "sha256": "968e03a2dbf17970b10d689de8fe4c518805fca5fcd93370510df6aeb9434c9a"
+    },
+    {
+      "path": "src/endpoint_lab/web/assets/shield-check.svg",
+      "sha256": "87de9d464170ad70df85fcc35efecef6c9fbce850d9ce1c7c9a0d75e4dc7b08f"
+    },
+    {
+      "path": "src/endpoint_lab/web/assets/skip-forward.svg",
+      "sha256": "884268359a369b6b552abfb622cd3ec32e15a29832e1358a21707b29334b21df"
+    },
+    {
+      "path": "src/endpoint_lab/web/assets/upload.svg",
+      "sha256": "80032411733eb0fa33d493a35345415e5156d20bf17f86bb5e5685de2ce9f74a"
+    },
+    {
+      "path": "src/endpoint_lab/web/assets/x.svg",
+      "sha256": "65b78d9fa306e2b6386fb9f3a9f10e1ba8067fa0d079046e1050db84f18f31f6"
+    }
+  ]
+}

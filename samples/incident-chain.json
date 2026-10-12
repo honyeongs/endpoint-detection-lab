@@ -1,0 +1,98 @@
+[
+  {
+    "event_id": 1,
+    "timestamp": "2026-01-01T00:00:00+00:00",
+    "host": "lab-01",
+    "process_guid": "00000000-0000-0000-0000-000000000001",
+    "image": "C:\\Windows\\explorer.exe",
+    "record_id": 1,
+    "pid": 10,
+    "parent_process_guid": "",
+    "parent_image": "",
+    "command_line": "",
+    "user": "LAB\\synthetic"
+  },
+  {
+    "event_id": 1,
+    "timestamp": "2026-01-01T00:00:01+00:00",
+    "host": "lab-01",
+    "process_guid": "00000000-0000-0000-0000-000000000002",
+    "image": "C:\\Program Files\\LabBrowser\\chrome.exe",
+    "record_id": 2,
+    "pid": 20,
+    "parent_process_guid": "00000000-0000-0000-0000-000000000001",
+    "parent_image": "C:\\Windows\\explorer.exe",
+    "command_line": "",
+    "user": "LAB\\synthetic"
+  },
+  {
+    "event_id": 11,
+    "timestamp": "2026-01-01T00:00:05+00:00",
+    "host": "lab-01",
+    "process_guid": "00000000-0000-0000-0000-000000000002",
+    "image": "C:\\Program Files\\LabBrowser\\chrome.exe",
+    "pid": 20,
+    "record_id": 3,
+    "target_filename": "C:\\Users\\lab\\AppData\\Local\\Temp\\invoice.exe"
+  },
+  {
+    "event_id": 1,
+    "timestamp": "2026-01-01T00:00:10+00:00",
+    "host": "lab-01",
+    "process_guid": "00000000-0000-0000-0000-000000000004",
+    "image": "C:\\Users\\lab\\AppData\\Local\\Temp\\invoice.exe",
+    "record_id": 4,
+    "pid": 40,
+    "parent_process_guid": "00000000-0000-0000-0000-000000000002",
+    "parent_image": "C:\\Program Files\\LabBrowser\\chrome.exe",
+    "command_line": "",
+    "user": "LAB\\synthetic"
+  },
+  {
+    "event_id": 1,
+    "timestamp": "2026-01-01T00:00:20+00:00",
+    "host": "lab-01",
+    "process_guid": "00000000-0000-0000-0000-000000000005",
+    "image": "C:\\Program Files\\LabOffice\\winword.exe",
+    "record_id": 5,
+    "pid": 50,
+    "parent_process_guid": "00000000-0000-0000-0000-000000000001",
+    "parent_image": "C:\\Windows\\explorer.exe",
+    "command_line": "",
+    "user": "LAB\\synthetic"
+  },
+  {
+    "event_id": 1,
+    "timestamp": "2026-01-01T00:00:30+00:00",
+    "host": "lab-01",
+    "process_guid": "00000000-0000-0000-0000-000000000006",
+    "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "record_id": 6,
+    "pid": 60,
+    "parent_process_guid": "00000000-0000-0000-0000-000000000005",
+    "parent_image": "C:\\Program Files\\LabOffice\\winword.exe",
+    "command_line": "powershell.exe -EncodedCommand SYNTHETIC_UNTRUSTED_INPUT",
+    "user": "LAB\\synthetic"
+  },
+  {
+    "event_id": 3,
+    "timestamp": "2026-01-01T00:00:45+00:00",
+    "host": "lab-01",
+    "process_guid": "00000000-0000-0000-0000-000000000006",
+    "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "pid": 60,
+    "record_id": 7,
+    "destination_ip": "8.8.8.8",
+    "destination_port": 443,
+    "initiated": true
+  },
+  {
+    "event_id": 5,
+    "timestamp": "2026-01-01T00:01:00+00:00",
+    "host": "lab-01",
+    "process_guid": "00000000-0000-0000-0000-000000000006",
+    "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "pid": 60,
+    "record_id": 8
+  }
+]

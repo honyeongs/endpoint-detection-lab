@@ -1,0 +1,14 @@
+{
+  "exclusions": [
+    {
+      "rule_id": "EDL-003",
+      "host": "lab-admin",
+      "command_line": "powershell.exe -EncodedCommand SYNTHETIC_APPROVED_ADMIN_TASK"
+    },
+    {
+      "rule_id": "EDL-004",
+      "host": "lab-admin",
+      "command_line": "powershell.exe -EncodedCommand SYNTHETIC_APPROVED_ADMIN_TASK"
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Events>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Sysmon" />
+      <EventID>1</EventID>
+      <TimeCreated SystemTime="2026-01-01T00:00:00+00:00" />
+      <EventRecordID>1</EventRecordID>
+      <Computer>lab-01</Computer>
+    </System>
+    <EventData>
+      <Data Name="UtcTime">2026-01-01T00:00:00+00:00</Data>
+      <Data Name="ProcessGuid">00000000-0000-0000-0000-000000000001</Data>
+      <Data Name="ProcessId">10</Data>
+      <Data Name="Image">C:\Windows\explorer.exe</Data>
+      <Data Name="ParentProcessGuid" />
+      <Data Name="ParentImage" />
+      <Data Name="CommandLine" />
+      <Data Name="User">LAB\synthetic</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Sysmon" />
+      <EventID>1</EventID>
+      <TimeCreated SystemTime="2026-01-01T00:00:01+00:00" />
+      <EventRecordID>2</EventRecordID>
+      <Computer>lab-01</Computer>
+    </System>
+    <EventData>
+      <Data Name="UtcTime">2026-01-01T00:00:01+00:00</Data>
+      <Data Name="ProcessGuid">00000000-0000-0000-0000-000000000002</Data>
+      <Data Name="ProcessId">20</Data>
+      <Data Name="Image">C:\Program Files\LabBrowser\chrome.exe</Data>
+      <Data Name="ParentProcessGuid">00000000-0000-0000-0000-000000000001</Data>
+      <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+      <Data Name="CommandLine" />
+      <Data Name="User">LAB\synthetic</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Sysmon" />
+      <EventID>11</EventID>
+      <TimeCreated SystemTime="2026-01-01T00:00:05+00:00" />
+      <EventRecordID>3</EventRecordID>
+      <Computer>lab-01</Computer>
+    </System>
+    <EventData>
+      <Data Name="UtcTime">2026-01-01T00:00:05+00:00</Data>
+      <Data Name="ProcessGuid">00000000-0000-0000-0000-000000000002</Data>
+      <Data Name="ProcessId">20</Data>
+      <Data Name="Image">C:\Program Files\LabBrowser\chrome.exe</Data>
+      <Data Name="TargetFilename">C:\Users\lab\AppData\Local\Temp\invoice.exe</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Sysmon" />
+      <EventID>1</EventID>
+      <TimeCreated SystemTime="2026-01-01T00:00:10+00:00" />
+      <EventRecordID>4</EventRecordID>
+      <Computer>lab-01</Computer>
+    </System>
+    <EventData>
+      <Data Name="UtcTime">2026-01-01T00:00:10+00:00</Data>
+      <Data Name="ProcessGuid">00000000-0000-0000-0000-000000000004</Data>
+      <Data Name="ProcessId">40</Data>
+      <Data Name="Image">C:\Users\lab\AppData\Local\Temp\invoice.exe</Data>
+      <Data Name="ParentProcessGuid">00000000-0000-0000-0000-000000000002</Data>
+      <Data Name="ParentImage">C:\Program Files\LabBrowser\chrome.exe</Data>
+      <Data Name="CommandLine" />
+      <Data Name="User">LAB\synthetic</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Sysmon" />
+      <EventID>1</EventID>
+      <TimeCreated SystemTime="2026-01-01T00:00:20+00:00" />
+      <EventRecordID>5</EventRecordID>
+      <Computer>lab-01</Computer>
+    </System>
+    <EventData>
+      <Data Name="UtcTime">2026-01-01T00:00:20+00:00</Data>
+      <Data Name="ProcessGuid">00000000-0000-0000-0000-000000000005</Data>
+      <Data Name="ProcessId">50</Data>
+      <Data Name="Image">C:\Program Files\LabOffice\winword.exe</Data>
+      <Data Name="ParentProcessGuid">00000000-0000-0000-0000-000000000001</Data>
+      <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+      <Data Name="CommandLine" />
+      <Data Name="User">LAB\synthetic</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Sysmon" />
+      <EventID>1</EventID>
+      <TimeCreated SystemTime="2026-01-01T00:00:30+00:00" />
+      <EventRecordID>6</EventRecordID>
+      <Computer>lab-01</Computer>
+    </System>
+    <EventData>
+      <Data Name="UtcTime">2026-01-01T00:00:30+00:00</Data>
+      <Data Name="ProcessGuid">00000000-0000-0000-0000-000000000006</Data>
+      <Data Name="ProcessId">60</Data>
+      <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+      <Data Name="ParentProcessGuid">00000000-0000-0000-0000-000000000005</Data>
+      <Data Name="ParentImage">C:\Program Files\LabOffice\winword.exe</Data>
+      <Data Name="CommandLine">powershell.exe -EncodedCommand SYNTHETIC_UNTRUSTED_INPUT</Data>
+      <Data Name="User">LAB\synthetic</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Sysmon" />
+      <EventID>3</EventID>
+      <TimeCreated SystemTime="2026-01-01T00:00:45+00:00" />
+      <EventRecordID>7</EventRecordID>
+      <Computer>lab-01</Computer>
+    </System>
+    <EventData>
+      <Data Name="UtcTime">2026-01-01T00:00:45+00:00</Data>
+      <Data Name="ProcessGuid">00000000-0000-0000-0000-000000000006</Data>
+      <Data Name="ProcessId">60</Data>
+      <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+      <Data Name="DestinationIp">8.8.8.8</Data>
+      <Data Name="DestinationPort">443</Data>
+      <Data Name="Initiated">true</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Sysmon" />
+      <EventID>5</EventID>
+      <TimeCreated SystemTime="2026-01-01T00:01:00+00:00" />
+      <EventRecordID>8</EventRecordID>
+      <Computer>lab-01</Computer>
+    </System>
+    <EventData>
+      <Data Name="UtcTime">2026-01-01T00:01:00+00:00</Data>
+      <Data Name="ProcessGuid">00000000-0000-0000-0000-000000000006</Data>
+      <Data Name="ProcessId">60</Data>
+      <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    </EventData>
+  </Event>
+</Events>
