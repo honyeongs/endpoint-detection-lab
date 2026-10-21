@@ -1,5 +1,7 @@
 # Third-party notices
 
+Hosted browser PWA: Pyodide 0.29.5 / CPython 3.13.2 and included runtime components are distributed separately from the CLI. Original notices and source links are in [website/THIRD_PARTY.md](website/THIRD_PARTY.md) and the deployed license page. PNG/ICO app icons are color/background adaptations of the existing Lucide shield, with original notices retained. Generated runtime binaries are excluded from this GitHub checkout.
+
 Bundled: **13 Lucide SVG icons**, from `lucide-static` version `1.55.0`.
 The unmodified upstream ISC license and inherited Feather MIT notices are at
 `src/endpoint_lab/web/assets/LUCIDE-LICENSE.txt`.

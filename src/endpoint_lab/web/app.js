@@ -2,6 +2,7 @@ import { $, el, visible, summary } from "./render.js";
 import { renderAlerts, renderTimeline } from "./timeline.js";
 import { renderProcesses } from "./processes.js";
 import { renderRules, renderVerification } from "./verification.js";
+import { apiRequest } from "./transport.js";
 
 const state = {
   source: null,
@@ -111,7 +112,7 @@ async function analyze(count) {
       "X-Lab-Policy": state.policy,
     };
     if (count !== undefined) headers["X-Replay-Count"] = String(count);
-    const response = await fetch("/api/analyze", {
+    const response = await apiRequest("/api/analyze", {
       method: "POST",
       headers,
       body: state.source,
@@ -185,7 +186,7 @@ async function openScenario(id) {
   state.controller = controller;
   controls();
   try {
-    const response = await fetch(`/api/scenarios/${encodeURIComponent(id)}`, {
+    const response = await apiRequest(`/api/scenarios/${encodeURIComponent(id)}`, {
       signal: controller.signal,
     });
     const source = await response.json();
@@ -316,7 +317,7 @@ $("export").addEventListener("click", () => {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 });
 try {
-  const response = await fetch("/api/catalog");
+  const response = await apiRequest("/api/catalog");
   if (!response.ok) throw new Error("규칙 목록 로드 실패");
   const catalog = await response.json();
   state.rules = catalog.rules;
@@ -328,7 +329,7 @@ try {
     }),
   );
   await openScenario("incident-chain");
-  const verification = await fetch("/api/validation");
+  const verification = await apiRequest("/api/validation");
   if (!verification.ok) throw new Error("검증 데이터 로드 실패");
   state.comparison = await verification.json();
   render();

@@ -10,7 +10,7 @@ from .validation import compare_policies
 ROOT = Path(__file__).parent / "web"
 STATIC = {"/": ("index.html", "text/html; charset=utf-8"),
           "/style.css": ("style.css", "text/css; charset=utf-8")}
-for name in ["app", "render", "timeline", "processes", "verification"]:
+for name in ["app", "render", "timeline", "processes", "verification", "transport"]:
     STATIC[f"/{name}.js"] = (name + ".js", "text/javascript; charset=utf-8")
 for name in ["shield-check", "upload", "download", "play", "pause", "skip-forward", "rotate-ccw", "search", "git-branch", "list", "flask-conical", "file-code", "x"]:
     STATIC[f"/assets/{name}.svg"] = ("assets/" + name + ".svg", "image/svg+xml")

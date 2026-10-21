@@ -1,5 +1,7 @@
 # Endpoint Detection Lab
 
+[웹에서 바로 사용](https://endpoint-lab-web.yao0422q.chatgpt.site/) · [Windows 앱 설치와 웹 실행 안내](docs/WEBSITE.md)
+
 최근 검사: [대표 10개·전체 회귀·웹 테스트 공개 기록](docs/testing/README.md). 원본 개인정보와 비밀값은 포함하지 않습니다.
 
 Sysmon 내보내기 로그를 분석하고, **탐지 근거와 오탐 조정 결과를 재현하는 로컬 보안 포트폴리오**입니다.
