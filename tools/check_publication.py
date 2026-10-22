@@ -9,6 +9,8 @@ import tomllib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+PUBLIC_REPORTS = {"docs/testing/2026-10-13-local.json", "docs/testing/2026-10-22-security-fixes.json",
+                  "docs/testing/2026-10-22-security-fixes-final.json"}
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "src"))
 from endpoint_lab.scenarios import get_case, tuned_policy  # noqa: E402
@@ -55,19 +57,19 @@ def check_tracked_files(root=ROOT):
                             cwd=root, capture_output=True, check=True)
     files = set(result.stdout.decode("utf-8").split("\0")) - {""}
     secret = re.compile(r"(?:github_pat_[A-Za-z0-9_]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----)")
-    approved_data = {"third-party-assets.json", "docs/testing/2026-10-13-local.json", "website/.openai/hosting.json"} | {f"{base}/{name}" for base in ["samples", "src/endpoint_lab/data"] for name in ["incident-chain.json", "incident-chain.xml", "tuned-policy.json"]}
+    approved_data = {"third-party-assets.json", "website/.openai/hosting.json"} | PUBLIC_REPORTS | {f"{base}/{name}" for base in ["samples", "src/endpoint_lab/data"] for name in ["incident-chain.json", "incident-chain.xml", "tuned-policy.json"]}
     for filename in files:
         file = root / filename
         if file.suffix.lower() in {".evtx", ".exe", ".dll", ".log", ".pcap", ".pem", ".key", ".pfx", ".p12"} or file.name.startswith(".env"):
             raise ValueError("Private telemetry, binaries or secrets must not be published.")
         if file.suffix in {".json", ".xml"} and filename not in approved_data:
             raise ValueError("Unreviewed JSON/XML data in the publication set.")
-        if filename == "docs/testing/2026-10-13-local.json":
+        if filename in PUBLIC_REPORTS:
             from tools.validation_support import validate_public_report
             validate_public_report(json.loads(file.read_text(encoding="utf-8")))
         if filename == "website/.openai/hosting.json":
             manifest = json.loads(file.read_text(encoding="utf-8"))
-            if set(manifest) != {"project_id", "static"} or manifest["static"] != {"directory": "dist"} or not re.fullmatch(r"appgprj_[a-zA-Z0-9]+", manifest["project_id"]):
+            if set(manifest) != {"project_id"} or not isinstance(manifest["project_id"], str) or not re.fullmatch(r"appgprj_[a-zA-Z0-9]+", manifest["project_id"]):
                 raise ValueError("Unreviewed website hosting manifest.")
         if file.suffix in {".py", ".js", ".mjs", ".html", ".css", ".md", ".json", ".xml", ".yml", ".toml", ".cmd"}:
             if secret.search(file.read_text(encoding="utf-8")):

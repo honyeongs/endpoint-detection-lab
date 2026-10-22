@@ -15,17 +15,19 @@ Date: 2026-10-22 (Asia/Seoul). Repository: `endpoint-detection-lab`.
 
 ## Verification Performed
 
-- Full local regression: 84 tests, 83 passed, 1 skipped, zero failures/errors. Skips: one Windows file-link privilege check; not counted as passes.
+- Final full local regression: 89 tests, 88 passed, 1 skipped, zero failures/errors. Skips: one Windows file-link privilege check; not counted as passes.
 
 - Five Python packaging checks passed: fixed public allowlist/original bytes, checksum mismatch rejection, directory-escape rejection, input/output separation and preservation/rejection of unrelated output files.
 - Five Node Worker checks passed: security headers, gzip round-trip, explicit manual encoding, bodyless HEAD/method rejection, and fixed asset paths.
 - Local browser checks and a fresh unauthenticated Chromium context at the actual public URL each passed all 12 checks: actual document/Worker/error headers; blocked cross-origin framing; browser-local analysis; native Python parity/input boundaries; cancellation/recovery; manifest/icons; Windows shortcut download; desktop/390px/360px layouts; install control; offline reload/analysis; session reset; no input transmission/external app requests/page errors.
 - The browser checks verify analysis still works with the Worker response CSP enforced, not only with an HTML meta policy.
 - The former ten representative portfolio cases passed again. They overlap the full suite and are not extra independent samples.
-- Sanitized full local test evidence: [JSON](testing/2026-10-22-security-fixes.json), [readable record](testing/2026-10-22-security-fixes.md). Test IDs, results, counts, durations, source fingerprints and categorized skips only; no raw telemetry, exception messages, personal paths, accounts, tokens or screenshots.
+- Sanitized final full local test evidence: [JSON](testing/2026-10-22-security-fixes-final.json), [readable record](testing/2026-10-22-security-fixes-final.md). Test IDs, results, counts, durations, source fingerprints and categorized skips only; no raw telemetry, exception messages, personal paths, accounts, tokens or screenshots. The [initial 84-test record](testing/2026-10-22-security-fixes.md) is retained as historical evidence.
 - Each GitHub push independently reruns the configured CI jobs. Check the [Actions run](https://github.com/honyeongs/endpoint-detection-lab/actions) for the exact commit and conclusion; a local pass is not a remote CI pass.
 
 ## Reproduction and Operational Notes
+
+The initial GitHub run blocked the new evidence filename and the migration away from the static-only manifest. The publication gate now explicitly allows only the three reviewed report filenames and validates each against the privacy schema; the Worker manifest accepts only a valid project ID and no extra fields. Five added tests verify the complete tracked set, manifest fields/types, privacy-schema enforcement, unknown JSON rejection and private-file rejection. No scanner was disabled. This follow-up changes the gate/tests/evidence, not the deployed application runtime.
 
 See [website build instructions](WEBSITE.md). Run `python tools/build_website.py` with the reviewed runtime archive, then `python tools/build_hosting.py`, the Python/Node checks and `node tests/browser/website.mjs`. Set `SITE_URL` to the actual public URL for a post-deployment run.
 
