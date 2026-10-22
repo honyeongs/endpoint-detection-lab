@@ -1,5 +1,7 @@
 # Security Policy
 
+The public PWA is separate from the loopback development server: it analyzes logs in the browser and serves only fixed public assets from a header-enforcing Worker. See [deployed security-fix verification](docs/SECURITY_FIXES_2026-10-22.md). The loopback-only restrictions below still apply to the Python server.
+
 This local portfolio lab analyzes selected telemetry. It is not an EDR, malware classifier, live collector, sandbox, or blocking service.
 
 ## Boundaries
